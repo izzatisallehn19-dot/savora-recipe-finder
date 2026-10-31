@@ -1,0 +1,261 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Savora | Recipe Finder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-content">
+
+            <a href="#" class="logo">
+                savora<span>.</span>
+            </a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#recipes">Recipes</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <a href="#recipes" class="nav-button">
+                Explore Recipes
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="eyebrow">
+                    ✦ YOUR DAILY RECIPE INSPIRATION
+                </span>
+
+                <h1>
+                    Discover food.<br>
+                    <span>Love every bite.</span>
+                </h1>
+
+                <p>
+                    Find your next favourite meal with Savora.
+                    Explore delicious recipes from around the world
+                    and make every meal special.
+                </p>
+
+                <a href="#recipes" class="primary-button">
+                    Explore Recipes →
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1000"
+                    alt="Healthy delicious food"
+                >
+
+                <div class="image-label">
+                    <span>✦</span>
+                    Fresh ideas, delicious meals.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECIPES -->
+    <section class="recipes-section" id="recipes">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">FIND YOUR FAVOURITE</span>
+                    <h2>Explore Recipes</h2>
+                    <p>Something delicious is waiting for you.</p>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search recipes, ingredients..."
+                >
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+
+            <!-- CATEGORY FILTER -->
+            <div class="category-list">
+
+                <button class="category-btn active" data-category="All">
+                    All Recipes
+                </button>
+
+                <button class="category-btn" data-category="Breakfast">
+                    Breakfast
+                </button>
+
+                <button class="category-btn" data-category="Lunch">
+                    Lunch
+                </button>
+
+                <button class="category-btn" data-category="Dinner">
+                    Dinner
+                </button>
+
+                <button class="category-btn" data-category="Dessert">
+                    Dessert
+                </button>
+
+            </div>
+
+
+            <!-- API STATUS -->
+            <div class="api-status" id="apiStatus">
+                Loading recipes...
+            </div>
+
+
+            <!-- RECIPE GRID -->
+            <div class="recipe-grid" id="recipeGrid">
+
+                <div class="loading-message">
+                    Finding delicious recipes...
+                </div>
+
+            </div>
+
+
+            <!-- LOAD MORE -->
+            <div class="load-more-container">
+
+                <button id="loadMoreBtn" class="load-more-btn">
+                    Load More Recipes
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+        <div class="container about-content">
+
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=1000"
+                    alt="Cooking in kitchen"
+                >
+            </div>
+
+            <div class="about-text">
+
+                <span class="eyebrow">ABOUT SAVORA</span>
+
+                <h2>
+                    Good food brings
+                    people together.
+                </h2>
+
+                <p>
+                    Savora is a recipe finder website designed
+                    to help people discover different meals
+                    from various food collections.
+                </p>
+
+                <p>
+                    With recipes from multiple APIs, users can
+                    explore food ideas, search for meals and
+                    discover new cooking inspiration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#" class="logo">
+                savora<span>.</span>
+            </a>
+
+            <p>
+                Discover. Cook. Enjoy.
+            </p>
+
+            <small>
+                © 2026 Savora Recipe Finder. All rights reserved.
+            </small>
+
+        </div>
+
+    </footer>
+
+
+    <!-- RECIPE MODAL -->
+    <div class="modal" id="recipeModal">
+
+        <div class="modal-box">
+
+            <button class="close-modal" id="closeModal">
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
